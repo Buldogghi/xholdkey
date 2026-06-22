@@ -16,7 +16,7 @@ keysym_str, keypress, keyrelease: string
 usage :: proc() {
 	usage := `: [-p <polling rate>] <X11 KeySym[s]> <program: in keypress> [program: in keyrelease]
 	(optional) '-p <polling rate>' is a flag to set the polling rate in milliseconds, defaults to 50
-  'KeySym[s]' is the keysym withouth the "XK_" prefix (like "Super_L" for the left 'windows' key, refer to /usr/include/X11/keysymdef.h or the xev (xorg-xev) program), to check for multiple separate them with a ','
+  'KeySym[s]' is the keysym without the "XK_" prefix (like "Super_L" for the left 'windows' key, refer to /usr/include/X11/keysymdef.h or the xev (xorg-xev) program), to check for multiple separate them with a ','
   'program: in keypress' is the name of the program to execute when any of the keysym[s] is pressed, it will execute in sh so to run multiple commands separate them with ';' (remember to wrap the argument in "" or ''), also keep in mind that the key will be passed as argument to the shell as $1 and $2 will be an int that is 1 if the key has been pressed, otherwise 0
   (optional) 'program: in keyrelease' is the same as keypress but when the key is released, set to '_' to copy keypress or leave blank to not execute anything
 `
