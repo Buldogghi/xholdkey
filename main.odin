@@ -57,7 +57,7 @@ main :: proc() {
 		args: [3]string = ""
 		for i := 1; i < argc; i += 1 {
 			arg := os.args[i]
-			if arg[0] == '-' {
+			if arg != "" && arg[0] == '-' {
 				switch arg {
 				case "-p":
 					if i + 1 >=
